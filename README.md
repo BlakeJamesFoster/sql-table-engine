@@ -5,10 +5,6 @@ command language called **SluQL**. It supports typed tables, filtered
 queries, joins between tables, and pluggable BST/hash indexes - all
 through a REPL that reads commands from standard input.
 
-This was the third project of a data structures course sequence, cleaned
-up (naming, comments, Javadoc) to the same standard as the other projects
-in this portfolio, with no change in behavior.
-
 ## Overview
 
 ```bash
