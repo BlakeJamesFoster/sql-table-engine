@@ -1,0 +1,14 @@
+#Test 12: GENERATE index, then DELETE rows, then PRINT WHERE
+CREATE catalog 3 string string int title genre pages
+INSERT INTO catalog 6 ROWS
+Dune scifi 412
+Neuromancer scifi 271
+Emma romance 474
+Beloved fiction 324
+Foundation scifi 255
+Persuasion romance 352
+GENERATE FOR catalog hash INDEX ON genre
+DELETE FROM catalog WHERE genre = romance
+PRINT FROM catalog 2 title pages WHERE genre = scifi
+REMOVE catalog
+QUIT

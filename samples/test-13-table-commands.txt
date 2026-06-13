@@ -1,0 +1,10 @@
+#Test 13: Single row table edge cases
+CREATE solo 3 string int bool name score winner
+INSERT INTO solo 1 ROWS
+Alice 100 true
+PRINT FROM solo 3 name score winner ALL
+PRINT FROM solo 1 name WHERE winner = true
+DELETE FROM solo WHERE score = 100
+PRINT FROM solo 2 name winner ALL
+REMOVE solo
+QUIT

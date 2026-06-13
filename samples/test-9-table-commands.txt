@@ -1,0 +1,20 @@
+#Test 9: Large INSERT and BST index traversal order
+CREATE records 3 string int bool name score passed
+INSERT INTO records 10 ROWS
+Frank 71 true
+Alice 95 true
+Ivan 60 false
+Carol 88 true
+Henry 60 false
+Bob 72 true
+Grace 91 true
+Dan 55 false
+Eve 84 true
+Jack 78 true
+GENERATE FOR records bst INDEX ON score
+PRINT FROM records 2 name score WHERE score = 60
+PRINT FROM records 1 name WHERE passed = false
+DELETE FROM records WHERE passed = false
+PRINT FROM records 2 name score WHERE score = 72
+REMOVE records
+QUIT

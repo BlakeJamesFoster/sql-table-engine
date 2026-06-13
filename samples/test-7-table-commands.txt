@@ -1,0 +1,19 @@
+#Test 7: JOIN on int column instead of string
+CREATE students 3 string int bool name id honor_roll
+INSERT INTO students 5 ROWS
+Alice 1001 true
+Bob 1002 false
+Carol 1003 true
+Dan 1004 false
+Eve 1005 true
+CREATE scores 3 int string int student_id subject grade
+INSERT INTO scores 5 ROWS
+1001 math 95
+1002 math 72
+1003 science 88
+1001 science 91
+1005 math 84
+JOIN students AND scores WHERE id = student_id AND PRINT 4 name 1 subject 2 grade 2 honor_roll 1
+REMOVE students
+REMOVE scores
+QUIT

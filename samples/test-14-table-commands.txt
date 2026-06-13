@@ -1,0 +1,16 @@
+#Test 14: PRINT WHERE with > and < on int column
+CREATE results 3 string int bool athlete time qualified
+INSERT INTO results 8 ROWS
+Anna 52 true
+Ben 61 false
+Cara 48 true
+Derek 70 false
+Elena 55 true
+Frank 45 true
+Bonnie 45 true
+Freddy 45 true
+GENERATE FOR results bst INDEX ON time
+PRINT FROM results 2 athlete time WHERE time > 55
+PRINT FROM results 2 athlete time WHERE time < 55
+REMOVE results
+QUIT

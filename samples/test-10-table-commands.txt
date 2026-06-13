@@ -1,0 +1,24 @@
+#Test 10: Operations after JOIN - DELETE then PRINT WHERE
+CREATE orders 3 string int bool item qty completed
+INSERT INTO orders 5 ROWS
+widget 10 true
+gadget 5 false
+widget 20 true
+doohickey 3 false
+widget 15 true
+CREATE prices 2 string int item price
+INSERT INTO prices 3 ROWS
+widget 50
+gadget 100
+doohickey 75
+GENERATE FOR prices hash INDEX ON item
+JOIN orders AND prices WHERE item = item AND PRINT 3 qty 1 price 2 completed 1
+DELETE FROM orders WHERE completed = true
+CREATE temp 1 bool status
+INSERT INTO temp 2 ROWS
+true
+false
+REMOVE orders
+REMOVE prices
+REMOVE temp
+QUIT

@@ -1,0 +1,13 @@
+#Test 8: PRINT WHERE string filter after DELETE
+CREATE courses 3 string string int dept name credits
+INSERT INTO courses 6 ROWS
+CS algorithms 3
+MATH calculus 4
+CS databases 3
+MATH algebra 3
+CS networks 3
+MATH stats 3
+DELETE FROM courses WHERE dept = MATH
+PRINT FROM courses 2 name credits WHERE dept = CS
+REMOVE courses
+QUIT

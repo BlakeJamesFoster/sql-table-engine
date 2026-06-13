@@ -1,0 +1,17 @@
+# comment line in the middle of INSERT INTO
+CREATE pets 3 string bool bool person happy Y/N
+CREATE class 3 string bool bool person happy Y/N
+CREATE bass 3 string bool bool person happy Y/N
+INSERT INTO pets 2 ROWS
+Sith true true
+# comment line
+Harcourt false false
+# Comment Line
+REMOVE class256
+PRINT FROM pets 3 person happy occupation ALL
+REMOVE pets
+REMOVE pets
+REMOVE Class
+REMOVE class
+QUIT
+CREATE class256 3 string bool bool person happy Y/N

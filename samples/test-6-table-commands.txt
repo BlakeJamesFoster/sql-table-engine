@@ -1,0 +1,16 @@
+#Test 6: Hash index on string, but WHERE filters on a different int column
+CREATE flights 3 string string int airline destination seats
+INSERT INTO flights 6 ROWS
+Delta NYC 120
+United LAX 200
+Delta LAX 95
+Delta ORD 180
+United NYC 150
+Southwest LAX 175
+GENERATE FOR flights hash INDEX ON airline
+PRINT FROM flights 2 airline destination WHERE seats = 200
+PRINT FROM flights 1 destination WHERE seats = 95
+DELETE FROM flights WHERE seats = 150
+PRINT FROM flights 2 airline seats ALL
+REMOVE flights
+QUIT

@@ -1,0 +1,19 @@
+#Test 15: Test all three comparators =, <, > on int column
+CREATE temps 3 string int string city temperature condition
+INSERT INTO temps 8 ROWS
+Boston 45 cloudy
+Denver 32 snow
+Phoenix 85 sunny
+Miami 78 humid
+Seattle 50 rainy
+Chicago 35 snow
+Houston 88 hot
+Portland 55 cloudy
+GENERATE FOR temps bst INDEX ON temperature
+PRINT FROM temps 2 city temperature WHERE temperature = 50
+PRINT FROM temps 2 city temperature WHERE temperature < 50
+PRINT FROM temps 2 city temperature WHERE temperature > 50
+DELETE FROM temps WHERE temperature = 32
+PRINT FROM temps 1 city WHERE temperature < 45
+REMOVE temps
+QUIT

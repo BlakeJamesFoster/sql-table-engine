@@ -1,0 +1,13 @@
+#Test 4: DELETE WHERE on int column
+CREATE scores 3 string string int player game score
+INSERT INTO scores 6 ROWS
+Alice chess 5
+Bob chess 9
+Alice darts 3
+Bob darts 7
+Carol chess 9
+Carol darts 2
+DELETE FROM scores WHERE score = 9
+PRINT FROM scores 3 player game score ALL
+REMOVE scores
+QUIT

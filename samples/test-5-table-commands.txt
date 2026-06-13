@@ -1,0 +1,16 @@
+#Test 5: Hash index directly on bool column
+CREATE members 3 string bool int name premium score
+INSERT INTO members 6 ROWS
+Alice true 1000
+Bob false 500
+Carol true 900
+Dan false 600
+Eve true 1200
+Frank false 400
+GENERATE FOR members hash INDEX ON premium
+PRINT FROM members 2 name score WHERE premium = true
+PRINT FROM members 1 name WHERE premium = false
+DELETE FROM members WHERE premium = false
+PRINT FROM members 3 name premium score ALL
+REMOVE members
+QUIT

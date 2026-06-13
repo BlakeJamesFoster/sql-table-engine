@@ -1,0 +1,20 @@
+CREATE 256class 3 wrongType string bool emotion person Y/N
+CREATE class 3 string string bool firstname lastname Y/N
+INSERT INTO class 4 ROWS
+Freddy Fazbear true
+Chicka Chicken false
+Bonnie Bunny false
+Foxy Fox false
+INSERT INTO class 2 ROWS
+Marrionette Puppet true
+William Afton false
+# comment
+CREATE bass 3 string string bool emotion person Y/N
+PRINT FROM bass 2 emotion person ALL
+CREATE bass 3 double double double emotion person Y/N
+PRINT FROM 256class 2 person emotion ALL
+PRINT FROM class 2 firstname lastname ALL
+PRINT FROM class 2 Y/N last ALL
+REMOVE class
+REMOVE bass
+QUIT

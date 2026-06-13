@@ -1,0 +1,18 @@
+#Test 1: Two separate BST indexes, verify correct traversal on each
+CREATE data 4 string int int bool name score level active
+INSERT INTO data 8 ROWS
+Alice 95 5 true
+Bob 72 3 false
+Carol 88 4 true
+Dan 60 2 false
+Eve 91 5 true
+Frank 78 4 false
+Grace 85 3 true
+Henry 70 2 false
+GENERATE FOR data bst INDEX ON score
+PRINT FROM data 2 name score WHERE score = 88
+DELETE FROM data WHERE score = 60
+GENERATE FOR data bst INDEX ON level
+PRINT FROM data 2 name level WHERE level = 4
+REMOVE data
+QUIT
